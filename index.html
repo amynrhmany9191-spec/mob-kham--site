@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مبل خام | فروشگاه تخصصی مبلمان</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Tahoma, Arial, sans-serif;
+    background: #f7f4ef;
+    color: #333;
+}
+
+header {
+    background: #493629;
+    color: white;
+    text-align: center;
+    padding: 25px 12px;
+}
+
+header h1 {
+    margin: 0 0 12px;
+    font-size: 30px;
+}
+
+header p {
+    margin: 0;
+}
+
+nav {
+    background: #72523b;
+    padding: 13px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 14px;
+}
+
+.hero {
+    text-align: center;
+    padding: 45px 15px;
+    background: #e9dfd2;
+}
+
+.hero h2 {
+    color: #493629;
+    font-size: 25px;
+}
+
+.hero p {
+    line-height: 2;
+}
+
+button {
+    background: #493629;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 12px 20px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.products {
+    padding: 25px 15px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px #00000012;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background: #ddd;
+}
+
+.card h3 {
+    color: #493629;
+}
+
+.card p {
+    padding: 0 12px;
+    line-height: 1.8;
+}
+
+.contact {
+    background: #e9dfd2;
+    text-align: center;
+    padding: 30px 15px;
+    line-height: 2;
+}
+
+footer {
+    background: #493629;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>مبل خام</h1>
+    <p>فروش تخصصی کلاف و اسکلت مبلمان</p>
+</header>
+
+<nav>
+    <a href="#home">صفحه اصلی</a>
+    <a href="#products">محصولات</a>
+    <a href="#contact">تماس با ما</a>
+</nav>
+
+<section class="hero" id="home">
+    <h2>انتخابی مطمئن برای تولیدکنندگان مبلمان</h2>
+    <p>
+        انواع کلاف مبل خام، مدل‌های راحتی و کلاسیک
+        <br>
+        مناسب کارگاه‌های تولیدی و مبل‌سازان
+    </p>
+    <button onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+        مشاهده محصولات
+    </button>
+</section>
+
+<section class="products" id="products">
+    <h2>محصولات فروشگاه</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://placehold.co/500x350/e9dfd2/493629?text=Comfort+Sofa+Frame" alt="کلاف مبل راحتی">
+            <h3>کلاف مبل راحتی</h3>
+            <p>مناسب تولید انواع مبلمان راحتی در مدل‌های مختلف.</p>
+            <button onclick="order('کلاف مبل راحتی')">استعلام قیمت</button>
+        </div>
+
+        <div class="card">
+            <img src="https://placehold.co/500x350/e9dfd2/493629?text=Classic+Sofa+Frame" alt="کلاف مبل کلاسیک">
+            <h3>کلاف مبل کلاسیک</h3>
+            <p>مناسب ساخت مبلمان کلاسیک و مدل‌های سفارشی.</p>
+            <button onclick="order('کلاف مبل کلاسیک')">استعلام قیمت</button>
+        </div>
+
+        <div class="card">
+            <img src="https://placehold.co/500x350/e9dfd2/493629?text=Single+Chair+Frame" alt="کلاف صندلی">
+            <h3>کلاف صندلی و تک‌نفره</h3>
+            <p>انواع کلاف تک‌نفره برای تولید و سفارش کارگاهی.</p>
+            <button onclick="order('کلاف صندلی و تک‌نفره')">استعلام قیمت</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>تماس با فروشگاه</h2>
+    <p>برای اطلاع از قیمت، موجودی و سفارش محصولات با ما تماس بگیرید.</p>
+    <p>شماره تماس فروشگاه را پس از آماده شدن سایت اضافه می‌کنیم.</p>
+</section>
+
+<footer>
+    <p>فروشگاه مبل خام | خرید و سفارش انواع کلاف مبلمان</p>
+</footer>
+
+<script>
+function order(product) {
+    alert('محصول انتخابی شما: ' + product +
+    '\nبرای ثبت سفارش، شماره تماس فروشگاه باید به سایت اضافه شود.');
+}
+</script>
+
+</body>
+</html>
